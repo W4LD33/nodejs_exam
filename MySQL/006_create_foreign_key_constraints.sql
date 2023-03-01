@@ -1,0 +1,11 @@
+ALTER TABLE Orders
+ADD FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID);
+
+ALTER TABLE Orders
+ADD FOREIGN KEY (OrderID) REFERENCES Shippers(ShipperID);
+
+ALTER TABLE Order_Details
+ADD FOREIGN KEY (OrderID) REFERENCES Orders(OrderID);
+
+ALTER TABLE Order_Details
+ADD FOREIGN KEY (ProductID) REFERENCES Products(ProductID);
