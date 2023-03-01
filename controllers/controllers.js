@@ -299,7 +299,7 @@ exports.postEmployeesAll = async (req, res, next) => {
 
 exports.deleteEmployeesAll = async (req, res, next) => {
     try {
-        await Shippers.deleteAll();
+        await Employees.deleteAll();
         res.status(201).json({ message: "Everything deleted"})
     } catch (error){
         console.log(error);
